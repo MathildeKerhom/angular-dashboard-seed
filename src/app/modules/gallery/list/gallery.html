@@ -1,0 +1,18 @@
+﻿<ol class="breadcrumb">
+    <li><span class="text-muted">YOU ARE HERE</span></li>
+    <li class="active">Gallery</li>
+</ol>
+<div class="row">
+    <div class="col-md-12">
+        <widget>
+            <header>
+                <h4 class="widget-title">Gallery</h4>
+            </header>
+            <ul>
+                <li ng-repeat="image in vm.gallery">
+                    <img src="{{ image.uri }}" alt="{{ image.alt }}"/>
+                </li>
+            </ul>
+        </widget>
+    </div>
+</div>

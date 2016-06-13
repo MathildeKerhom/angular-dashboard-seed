@@ -7,6 +7,7 @@ var passport = require('passport');
 var auth = require('./routes/auth');
 var posts = require('./routes/posts');
 var profiles = require('./routes/profiles');
+var gallery = require('./routes/gallery.js');
 var session = require('./session');
 var path = require('path');
 
@@ -36,6 +37,7 @@ auth.configure(app);
 app.all('*', session.ensureAuthenticated);
 posts.configure(app);
 profiles.configure(app);
+gallery.configure(app);
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
