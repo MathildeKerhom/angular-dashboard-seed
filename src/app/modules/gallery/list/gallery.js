@@ -5,9 +5,9 @@
         .module('app.gallery')
         .controller('GalleryController', galleryController);
 
-    galleryController.$inject = ['gallery'];
-    function galleryController(gallery) {
+    galleryController.$inject = ['dataImages'];
+    function galleryController(dataImages) {
         var vm = this;
-        vm.gallery = gallery;
+        vm.images = dataImages;
     }
 })();

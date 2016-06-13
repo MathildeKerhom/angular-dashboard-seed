@@ -9,9 +9,9 @@
                 <h4 class="widget-title">Gallery</h4>
             </header>
             <ul>
-                <li ng-repeat="image in vm.gallery">
-                    <img src="{{ image.uri }}" alt="{{ image.alt }}"/>
-                </li>
+                <ol ng-repeat="image in vm.images">
+                    <img height="300" width="300" src="{{ image.uri }}" alt="{{ image.alt }}"/>
+                </ol>
             </ul>
         </widget>
     </div>
